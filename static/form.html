@@ -1,21 +1,38 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuovo libro</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/6/w3.css">
 </head>
-<body>
-    <form id="form-libro">
-        <label for="titolo">Titolo</label>
-        <input type="text" id="titolo" required>
-        <br>
-        <label for="autore">Autore</label>
-        <input type="text" id="autore" required>
-        <br>
-        <button type="submit">Invia</button>
+<body class="w3-content">
+
+    <div class="w3-container w3-blue w3-padding-large">
+        <h1>ah ecco!</h1>
+    </div>
+
+    <form class="w3-container w3-border" id="form-libro">
+
+        <div class="w3-container w3-margin-top w3-margin-bottom">
+            <label for="titolo">Titolo</label>
+            <input class="w3-input" type="text" id="titolo" required>
+        </div>
+
+        <div class="w3-container w3-margin-top w3-margin-bottom">
+            <label for="autore">Autore</label>
+            <input class="w3-input" type="text" id="autore" required>
+        </div>
+
+        <div class="w3-container">
+            <button class="w3-button w3-black w3-margin-top w3-margin-bottom" type="submit">Invia</button>
+        </div>
+        
     </form>
 
-    <p id="risultato"></p>
+    <div class="w3-container"><p id="risultato">TEST</p></div>
+
+    <div class="w3-container w3-light-grey w3-border"><p>kepei</p></div>
 
     <script>
         document.getElementById("form-libro").addEventListener('submit', async (e) => {
