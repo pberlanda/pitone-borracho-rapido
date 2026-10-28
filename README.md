@@ -3,8 +3,8 @@
 1. crea l'ambiente virtuale, attivalo e installa le dipendenze (fastapi uvicorn)
 
        python -m venv venv
-       *Mac/Linux* source venv/bin/activate
-       *Win* .\venv\Scripts\activate
+       Mac/Linux -> source venv/bin/activate
+       Win -> .\venv\Scripts\activate
        pip install fastapi uvicorn
 
 2. scrivi il codice
