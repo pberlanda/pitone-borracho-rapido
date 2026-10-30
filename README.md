@@ -10,9 +10,11 @@
 2. scrivi il codice
 3. avvio del server
 
-        uvicorn app:app --reload --host 0.0.0.0 -> app ascolta su tutte le interfacce di rete disponibili. Permette di accedere all'app da dispositivi sulla stessa LAN. Tieni d'occhio il Terminale, ti indica su che interfaccia:porta l'app sta ascoltando!
+        uvicorn app:app --reload --host 0.0.0.0`
+        
+        -> con --host 0.0.0.0 app ascolta su tutte le interfacce di rete disponibili. Permette di accedere all'app da dispositivi sulla stessa LAN. Tieni d'occhio il Terminale, ti indica su che interfaccia:porta l'app sta ascoltando!
 
-        Se invece usi --127.0.0.1 o localhost l'app è accessibile solo in locale
+        -> Se invece usi --127.0.0.1 o localhost l'app è accessibile solo in locale
 
 4. test API
 - tutti i libri /libri
