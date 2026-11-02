@@ -41,7 +41,7 @@ qui per [altro](https://chatgpt.com/share/6ae843d5-602c-83ed-a05a-ad1a27fe361e)
 
 l'app seguirà questa roadmap di sviluppo
 
-![Roadmap delle funzionalità da implementare nell'app](/pitone-borracho-rapido/screenshots/pitone-borracho-rapido-db-roadmap.png)
+![Roadmap delle funzionalità da implementare nell'app](./screenshots/pitone-borracho-rapido-db-roadmap.png)
 
 ## Roadmap delle prossime versioni
 
