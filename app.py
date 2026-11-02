@@ -5,7 +5,7 @@ from pydantic import BaseModel
 # inzializzo l'app
 app = FastAPI()
 
-# modello dei ati (schema del libro)
+# modello dei dati (schema del libro)
 class Libro(BaseModel):
     id: int
     titolo: str
@@ -17,6 +17,11 @@ libri = [
     {"id": 2, "titolo": "Il fu Mattia Pascal", "autore": "Luigi Pirandello"},
     {"id": 3, "titolo": "Ti con zero", "autore": "Italo Calvino"}
 ]
+
+# route main
+@app.get("/")
+def home():
+    return FileResponse("templates/index.html")
 
 # GET: tutti i libri
 @app.get("/libri")
@@ -40,4 +45,4 @@ def add_libri(libro: Libro):
 # form HTML
 @app.get("/form")
 def showForm():
-    return FileResponse("static/form.html")
+    return FileResponse("templates/form_nuovo_libro.html")

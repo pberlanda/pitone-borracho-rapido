@@ -33,4 +33,4 @@
 - /redocs
 
 
-qui per [altro](https://chatgpt.com/share/6ad6474c-77d8-83ed-8d77-99d2a3040750)
+qui per [altro](https://chatgpt.com/share/6ae843d5-602c-83ed-a05a-ad1a27fe361e)
