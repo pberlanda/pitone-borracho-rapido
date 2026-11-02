@@ -47,7 +47,7 @@ l'app seguirà questa roadmap di sviluppo
 
 questa è la roadmap delle versioni
 
-![Roadmap delle versioni](/pitone-borracho-rapido/screenshots/pitone-borracho-rapido-roadmap-versioni.png)
+![Roadmap delle versioni](./screenshots/pitone-borracho-rapido-roadmap-versioni.png)
 
 ## in questa versione 1.1
 L'app verrà implementata con
