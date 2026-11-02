@@ -10,11 +10,11 @@
 2. scrivi il codice
 3. avvio del server
 
-        uvicorn app:app --reload --host 0.0.0.0`
+        uvicorn app:app --reload --host 0.0.0.0
         
         -> con --host 0.0.0.0 app ascolta su tutte le interfacce di rete disponibili. Permette di accedere all'app da dispositivi sulla stessa LAN. Tieni d'occhio il Terminale, ti indica su che interfaccia:porta l'app sta ascoltando!
 
-        -> Se invece usi --127.0.0.1 o localhost l'app è accessibile solo in locale
+        -> Se invece usi --host 127.0.0.1 o --host localhost l'app è accessibile solo in locale
 
 4. test API
 - tutti i libri /libri
@@ -28,7 +28,7 @@
         }
   oppure usa il form /form
  
-5. FastAPI cre la documentazione automatica
+5. FastAPI crea la documentazione automatica
 - /docs
 - /redocs
 
@@ -37,7 +37,7 @@ qui per [altro](https://chatgpt.com/share/6ae843d5-602c-83ed-a05a-ad1a27fe361e)
 
 # pitone-borracho-rapido v.1.1
 
-## Prossimi obietivi di sviluppo
+## Prossimi obiettivi di sviluppo
 
 l'app seguirà questa roadmap di sviluppo
 
