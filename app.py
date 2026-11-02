@@ -29,7 +29,7 @@ def get_libri():
     return libri
 
 # GET: un libro
-@app.get("/libro/{id}")
+@app.get("/libri/{id}")
 def get_libro(id: int):
     for libro in libri:
         if libro["id"] == id:
