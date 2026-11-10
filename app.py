@@ -28,6 +28,11 @@ def home():
 def get_libri():
     return libri
 
+# GET: tutti i libri in pagina HTML
+@app.get("/libri-pagina")
+def get_pagina_libri():
+    return FileResponse("templates/libri.html")
+
 # GET: un libro
 @app.get("/libri/{id}")
 def get_libro(id: int):

@@ -1,0 +1,79 @@
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Die Buchverwandlung</title>
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body class="bg-light">
+    <div class="container-fluid p-3 text-white text-center bg-primary"><h1>Die Sammlung</h1></div>
+
+    <div class="container mt-3">
+
+        <div class="container mt-3"><p class="lead">Sammlung der Buecher</p></div>
+        
+        <div class="row">
+            <div class="col">
+
+                <table class="table table-striped table-bordered" id="tabella-libri">
+
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Titolo</th>
+                            <th>Autore</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>2</td>
+                            <td>3</td>
+                        </tr>
+                    </tbody>
+
+                </table>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        async function caricaLibri() {
+
+            console.log("TEST Ok");
+
+            const risposta = await fetch("/libri"); // chiama la route che legge i libri
+            const libri = await risposta.json();    // cerca nell'oggetto resstituito il JSON (oggetto restitutio dalla route)
+
+            const tabella = document.getElementById("tabella-libri"); // riferimento alla tabella
+
+            // per ogni item dell'oggetto libri
+            // con una arrow function creo un oggetto libro
+            // creo una riga in cui compongo la riga della tabella
+            // con l'interpolazione aggiungo i dati alla tabella 
+            libri.forEach(libro => {
+                const riga = `
+
+                <tr>
+                    <td>${libro.id}</td>
+                    <td>${libro.titolo}</td>
+                    <td>${libro.autore}</td>
+                </tr>
+                `;
+
+                tabella.innerHTML +- riga; // aggiungo la riga composta alla tabella
+
+            });
+        }
+
+        caricaLibri();
+
+    </script>
+
+</body>
+</html>
