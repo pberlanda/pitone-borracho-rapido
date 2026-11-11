@@ -47,6 +47,15 @@ def add_libri(libro: Libro):
     libri.append(libro.dict()) # converte l'oggetto libro in un dizionario
     return libro
 
+# DELETE: elimina un libro
+@app.delete("/delete/{id}")
+def del_libro(id: int):
+    for libro in libri:
+        if libro["id"]==id:
+            pass
+            return
+    return {"errore":"libro non trovato"}
+
 # form HTML
 @app.get("/form")
 def showForm():
