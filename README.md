@@ -67,7 +67,8 @@ verifico il  branch attuale
 
         git branch
 
-## implementazine Homepage
+## implementazione Homepage
 1. creo cartella *templates* e ci sposto il html esistente (*form.html* che viene rinominato). Inoltre creo *index.html* - Si introduce l'uso di **Bootstrap 5**
 2. creo la route per la home page in app.py
 3. verifico il funzionamento
+4. aggiunta pagina libri.html e relativa route con cui visualizzo l'elenco dei libri. la pagina ha una navbar per navigare nella'app
