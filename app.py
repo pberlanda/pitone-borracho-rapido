@@ -52,8 +52,9 @@ def add_libri(libro: Libro):
 def del_libro(id: int):
     for libro in libri:
         if libro["id"]==id:
-            pass
-            return
+            libri.remove(libro)
+            return {"messaggio":"libro eliminato"}
+
     return {"errore":"libro non trovato"}
 
 # form HTML

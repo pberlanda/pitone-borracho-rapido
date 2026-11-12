@@ -45,6 +45,7 @@
                                 <th>Id</th>
                                 <th>Titolo</th>
                                 <th>Autore</th>
+                                <th>Azioni</th>
                             </tr>
                         </thead>
 
@@ -85,6 +86,10 @@
                     <td>${libro.id}</td>
                     <td>${libro.titolo}</td>
                     <td>${libro.autore}</td>
+                    <td>
+                        <a href="/delete/${libro.id}" class="btn btn-sm btn-danger" onClick="eliminaLibro();">Elimina</a>
+                        <a href="/edit/${libro.id}" class="btn btn-sm btn-primary">Modifica</a>
+                    </td>
                 </tr>
                 `;
 
@@ -94,6 +99,19 @@
         }
 
         caricaLibri();
+
+        async function eliminaLibro(id) {
+
+            const risposta = await fetch(`/delete/${id}`, { method: 'DELETE' });
+            const risultato = await risposta.json();
+
+            console.log(risultato);
+
+            // Ricarica la tabella dei libri dopo l'eliminazione
+            document.getElementById("tabella-libri").innerHTML = ""; // Pulisce la tabella
+            
+            caricaLibri(); // Ricarica i libri
+        }
 
     </script>
 
