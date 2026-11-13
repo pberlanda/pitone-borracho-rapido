@@ -101,19 +101,28 @@
 
         caricaLibri();
 
-        // elimina libro
-        const eliminaLibro = async(id) => {
-            
-            const risposta = await fetch("/delete/" + id, {
-                method: "DELETE"
-            });
+        async function eliminaLibro(id){
+            if (confirm("Sei sicuro di voler eliminare il libro con id " + id + "?") == true) {
+                
+                try {
+                    const risposta = await fetch("/delete/" + id, {
+                        method: "DELETE"
+                    });
 
-            const risultato = risposta.json();
+                    const risultato = await risposta.json();
 
-            console.log("TEST " + risultato);
+                    console.log("TEST " + risultato);
 
-            location.reload();
+                    location.reload();
 
+                } catch (error) {
+                    console.error("Errore durante l'eliminazione del libro:", error);
+                    alert("Si è verificato un errore durante l'eliminazione del libro. Riprova più tardi.");
+                }
+            } else {
+                console.log("Eliminazione annullata per il libro con id " + id);
+                return 1;
+            }
         }
 
     </script>
