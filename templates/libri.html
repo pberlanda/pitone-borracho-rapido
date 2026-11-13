@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="it">
 <head>
     <meta charset="UTF-8">
@@ -87,7 +88,7 @@
                     <td>${libro.titolo}</td>
                     <td>${libro.autore}</td>
                     <td>
-                        <a href="/delete/${libro.id}" class="btn btn-sm btn-danger" onClick="eliminaLibro();">Elimina</a>
+                        <a href="/delete/${libro.id}" class="btn btn-sm btn-danger" onClick="eliminaLibro(${libro.id});">Elimina</a>
                         <a href="/edit/${libro.id}" class="btn btn-sm btn-primary">Modifica</a>
                     </td>
                 </tr>
@@ -100,17 +101,19 @@
 
         caricaLibri();
 
-        async function eliminaLibro(id) {
-
-            const risposta = await fetch(`/delete/${id}`, { method: 'DELETE' });
-            const risultato = await risposta.json();
-
-            console.log(risultato);
-
-            // Ricarica la tabella dei libri dopo l'eliminazione
-            document.getElementById("tabella-libri").innerHTML = ""; // Pulisce la tabella
+        // elimina libro
+        const eliminaLibro = async(id) => {
             
-            caricaLibri(); // Ricarica i libri
+            const risposta = await fetch("/delete/" + id, {
+                method: "DELETE"
+            });
+
+            const risultato = risposta.json();
+
+            console.log("TEST " + risultato);
+
+            location.reload();
+
         }
 
     </script>
